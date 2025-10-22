@@ -10,24 +10,28 @@
 body {
     font-family:var(--ff);
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: var(--text);
+    background-color: var(--bg);
 }
 
 /* CSS Variables for palette and typography (Mobile-first) */
 :root{
+    /* Design tokens - conventional codes */
     --bg: #F5F5F5;
-    --card: #ffffff;
-    --text: #0F172A;
-    --muted: #6B7280;
-    --primary: #1E3A8A; /* deep blue */
-    --accent: #10B981;  /* mint green */
+    --card: #FFFFFF;
+    --text: #0B1220; /* near-black */
+    --gray-900: #111827;
+    --gray-700: #374151;
+    --gray-500: #6B7280;
+    --gray-300: #D1D5DB;
+    --primary: #0B63D8; /* conventional blue */
+    --accent: #00B67A;  /* lively green */
     --radius: 8px;
     --max-width: 1200px;
     --space: 1rem;
-    --ff: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    --shadow-soft: 0 8px 24px rgba(16,24,40,0.06);
-    --shadow-sm: 0 4px 12px rgba(16,24,40,0.06);
+    --ff: 'Roboto', system-ui, -apple-system, 'Segoe UI', 'Inter', Roboto, 'Helvetica Neue', Arial;
+    --shadow-soft: 0 10px 30px rgba(11,22,40,0.06);
+    --shadow-sm: 0 6px 18px rgba(11,22,40,0.06);
 }
 
 /* Utility container */
@@ -139,38 +143,29 @@ a:focus, button:focus, input:focus{outline:3px solid rgba(16,185,129,0.12);outli
 
 /* Contenu Principal */
 main, section {
-    padding: 20px;
-    margin: 20px auto;
+    padding: calc(var(--space) * 1.25);
+    margin: calc(var(--space) * 1.25) auto;
     max-width: 960px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--card);
+    border-radius: calc(var(--radius) - 3px);
+    box-shadow: var(--shadow-sm);
 }
 
 h1 {
-    color: #007bff;
-    text-align: center;
-    margin-bottom: 10px;
+    color: var(--primary);
+    text-align: left;
+    margin-bottom: .5rem;
 }
 
 h2 {
-    color: #333;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
-    margin-top: 20px;
+    color: var(--gray-900);
+    border-bottom: 1px solid var(--gray-300);
+    padding-bottom: 8px;
+    margin-top: 1rem;
 }
 
-/* Pied de page */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
-    margin-top: 20px;
-}
+/* Footer */
+footer{background:transparent}
 
 /* Styles spécifiques pour les sections à remplir */
-section p {
-    font-style: italic;
-    color: #666;
-}
+section p{font-style:normal;color:var(--gray-700)}
