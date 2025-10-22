@@ -4,50 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Projet Test - Site Vitrine</title>
+    <title>Plateforme Académique — Ressources & Cours</title>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#a-propos">À Propos</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header role="banner">
+        <div class="container nav-container">
+            <a class="brand" href="#accueil" aria-label="Accueil — Plateforme Académique">Académie</a>
+            <button id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">☰</button>
+            <nav id="main-nav" role="navigation" aria-label="Menu principal">
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#cours">Cours</a></li>
+                    <li><a href="#articles">Articles</a></li>
+                    <li><a href="#forum">Forum</a></li>
+                    <li><a href="#ressources">Ressources</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><button id="login-btn" class="btn-secondary">Se connecter</button></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main id="accueil">
-        <!-- Ligne à modifier par les Membres 2 et 3 pour créer le conflit -->
-        <h1>Bienvenue sur le Site Vitrine du Projet Académique</h1>
-        <!-- Fin de la ligne à modifier -->
-        <p>Ce projet est une démonstration de nos compétences en développement web et en gestion de projet collaborative via Git. Chaque membre de l'équipe est responsable d'une section spécifique du site.</p>
-        <p>Utilisez le menu de navigation pour explorer les différentes sections du site, développées par les membres de notre équipe.</p>
+    <main id="accueil" role="main">
+        <section class="hero" aria-label="Présentation">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Apprendre, Partager, Innover</h1>
+                <p class="lead">Une plateforme académique dédiée aux étudiants et enseignants pour accéder à des cours, articles, et un espace d'échange collaboratif.</p>
+                <form id="search-form" role="search" aria-label="Recherche interne">
+                    <label for="search" class="visually-hidden">Rechercher des cours ou documents</label>
+                    <input id="search" name="search" type="search" placeholder="Rechercher des cours, articles..." aria-label="Rechercher des cours, articles" />
+                    <button type="submit" class="btn-primary">Rechercher</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="cours" class="container cards" aria-labelledby="cours-title">
+            <h2 id="cours-title">Cours Populaires</h2>
+            <div class="grid">
+                <article class="card" tabindex="0">
+                    <h3>Introduction à l'IA</h3>
+                    <p>Cours d'initiation aux concepts et outils de l'intelligence artificielle.</p>
+                    <a href="#" class="btn-link">Voir le cours</a>
+                </article>
+                <article class="card" tabindex="0">
+                    <h3>Algorithmique et Structures de Données</h3>
+                    <p>Principes fondamentaux et exercices pratiques.</p>
+                    <a href="#" class="btn-link">Voir le cours</a>
+                </article>
+                <article class="card" tabindex="0">
+                    <h3>Projet et Gestion</h3>
+                    <p>Méthodes agiles et gestion de projet collaboratif.</p>
+                    <a href="#" class="btn-link">Voir le cours</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="articles" class="container" aria-labelledby="articles-title">
+            <h2 id="articles-title">Articles Récents</h2>
+            <ul class="articles-list">
+                <li>
+                    <a href="#">Comment concevoir un cours en ligne efficace</a>
+                    <span class="meta">— 12 oct. 2025</span>
+                </li>
+                <li>
+                    <a href="#">Bonnes pratiques pour l'accessibilité web</a>
+                    <span class="meta">— 5 oct. 2025</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="forum" class="container" aria-labelledby="forum-title">
+            <h2 id="forum-title">Forum & Espace d'échange</h2>
+            <p>Un espace pour poser des questions et partager des idées. (Module forum à connecter au backend)</p>
+            <div class="forum-sample">
+                <article>
+                    <h3>Question : Comment préparer un exposé ?</h3>
+                    <p>Réponse de la communauté — <a href="#">Voir la discussion</a></p>
+                </article>
+            </div>
+        </section>
+
+        <section id="ressources" class="container" aria-labelledby="ressources-title">
+            <h2 id="ressources-title">Ressources Pédagogiques</h2>
+            <ul>
+                <li><a href="#">Guide PDF : Rédiger un rapport de projet</a></li>
+                <li><a href="#">Vidéo : Introduction aux réseaux neuronaux</a></li>
+                <li><a href="#">Dépôt Git : Exemples de code</a></li>
+            </ul>
+        </section>
+
+        <section id="feedback" class="container" aria-labelledby="feedback-title">
+            <h2 id="feedback-title">Donnez votre avis</h2>
+            <p>Évaluez nos cours et articles :</p>
+            <div class="rating" role="region" aria-label="Évaluation des contenus">
+                <button class="star" data-value="1" aria-label="1 étoile">★</button>
+                <button class="star" data-value="2" aria-label="2 étoiles">★</button>
+                <button class="star" data-value="3" aria-label="3 étoiles">★</button>
+                <button class="star" data-value="4" aria-label="4 étoiles">★</button>
+                <button class="star" data-value="5" aria-label="5 étoiles">★</button>
+                <span id="rating-result" aria-live="polite">0/5</span>
+            </div>
+        </section>
+
+        <section id="contact" class="container" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact</h2>
+            <p>Une question ? Envoyez-nous un message, nous répondrons rapidement.</p>
+            <form id="contact-form" aria-label="Formulaire de contact">
+                <label for="name">Nom</label>
+                <input id="name" name="name" type="text" required />
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="btn-primary">Envoyer</button>
+                <div id="contact-status" role="status" aria-live="polite"></div>
+            </form>
+        </section>
     </main>
 
-    <!-- Section Membre 2 : À Propos -->
-    <section id="a-propos">
-        <h2>À Propos de Notre Équipe</h2>
-        <p>Cette section sera complétée par le Membre 2.</p>
-    </section>
-
-    <!-- Section Membre 3 : Services -->
-    <section id="services">
-        <h2>Nos Services et Compétences</h2>
-        <p>Cette section sera complétée par le Membre 3.</p>
-    </section>
-
-    <!-- Section Membre 4 : Contact -->
-    <section id="contact">
-        <h2>Nous Contacter</h2>
-        <p>Cette section sera complétée par le Membre 4.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Keyce Informatique et IA B3 SOIR Tous droits réservés.</p>
+    <footer role="contentinfo">
+        <div class="container footer-grid">
+            <p>&copy; 2025 Plateforme Académique — Tous droits réservés.</p>
+            <nav aria-label="Liens secondaires">
+                <a href="#">Mentions légales</a> • <a href="#">Politique de confidentialité</a>
+            </nav>
+        </div>
     </footer>
 
+    <!-- Login Modal (mock) -->
+    <div id="login-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="login-title">
+        <div class="modal-content">
+            <button id="close-login" class="modal-close" aria-label="Fermer la fenêtre">×</button>
+            <h2 id="login-title">Connexion</h2>
+            <form id="login-form" aria-label="Formulaire de connexion">
+                <label for="user">Utilisateur</label>
+                <input id="user" name="user" type="text" required />
+                <label for="pass">Mot de passe</label>
+                <input id="pass" name="pass" type="password" required />
+                <button type="submit" class="btn-primary">Se connecter</button>
+                <div id="login-status" role="status" aria-live="polite"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js" defer></script>
 </body>
 </html>
