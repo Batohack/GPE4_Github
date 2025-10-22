@@ -24,159 +24,197 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    <!doctype html>
+    <html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Productivine — Boostez votre productivité</title>
 
-    <main id="accueil" role="main">
-        <section class="hero" aria-label="Présentation" data-animate="fade-up">
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-                <h1>Apprendre, Partager, Innover</h1>
-                <p class="lead">Une plateforme académique dédiée aux étudiants et enseignants pour accéder à des cours, articles, et un espace d'échange collaboratif.</p>
-                <form id="search-form" role="search" aria-label="Recherche interne">
-                    <label for="search" class="visually-hidden">Rechercher des cours ou documents</label>
-                    <input id="search" name="search" type="search" placeholder="Rechercher des cours, articles..." aria-label="Rechercher des cours, articles" />
-                    <button type="submit" class="btn-primary">Rechercher</button>
+        <!-- Performance: préconnexion à Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- Inter (Google Fonts) -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles.css">
+
+        <meta name="description" content="Productivine — Application SaaS pour améliorer la productivité d'équipes. Planification, tâches et collaboration simple et élégante.">
+    </head>
+    <body>
+
+        <!-- Header: sticky -->
+        <header class="site-header" role="banner">
+            <div class="container header-inner">
+                <a href="#hero" class="logo" aria-label="Productivine — page d'accueil">
+                    <strong>Productivine</strong>
+                </a>
+
+                <nav class="nav" role="navigation" aria-label="Navigation principale">
+                    <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Ouvrir le menu">
+                        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </button>
+
+                    <ul id="nav-list" class="nav-list" role="menubar">
+                        <li role="none"><a role="menuitem" href="#features">Fonctionnalités</a></li>
+                        <li role="none"><a role="menuitem" href="#pricing">Tarifs</a></li>
+                        <li role="none"><a role="menuitem" href="#testimonials">Témoignages</a></li>
+                        <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+                        <li role="none" class="cta"><a class="btn btn-primary" href="#signup">Essayer gratuitement</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="hero" class="hero" role="main">
+            <div class="container hero-inner" data-animate>
+                <div class="hero-content">
+                    <h1>Travaillez mieux. Livrez plus.</h1>
+                    <p class="hero-sub">Productivine rassemble tâches, planning et collaboration dans une interface claire pour les équipes ambitieuses.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#signup">Essayer gratuitement</a>
+                        <a class="btn btn-ghost" href="#features">Découvrir</a>
+                    </div>
+                </div>
+
+                <figure class="hero-visual" aria-hidden="true">
+                    <svg width="520" height="320" viewBox="0 0 520 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="mock-graphic">
+                        <rect x="0" y="0" width="520" height="320" rx="12" fill="#FFFFFF"/>
+                        <rect x="24" y="24" width="200" height="24" rx="6" fill="#F1F5F9"/>
+                        <rect x="24" y="64" width="460" height="20" rx="6" fill="#F8FAFC"/>
+                        <rect x="24" y="96" width="200" height="160" rx="8" fill="#F8FAFC"/>
+                        <rect x="240" y="96" width="244" height="160" rx="8" fill="#F8FAFC"/>
+                    </svg>
+                </figure>
+            </div>
+        </main>
+
+        <!-- Features -->
+        <section id="features" class="section features" aria-labelledby="features-title" data-animate>
+            <div class="container">
+                <h2 id="features-title">Ce que Productivine fait pour vous</h2>
+                <p class="lede">Des outils puissants, une interface légère — tout pour garder le focus.</p>
+
+                <div class="features-grid" role="list">
+                    <article class="feature-card" role="listitem">
+                        <h3>Tableaux Kanban</h3>
+                        <p>Visualisez le flux de travail et déplacez les tâches facilement.</p>
+                    </article>
+                    <article class="feature-card" role="listitem">
+                        <h3>Planification intelligente</h3>
+                        <p>Calendriers et timelines synchronisées pour aligner l'équipe.</p>
+                    </article>
+                    <article class="feature-card" role="listitem">
+                        <h3>Collaboration en temps réel</h3>
+                        <p>Commentaires, mentions et partage sécurisé des ressources.</p>
+                    </article>
+                    <article class="feature-card" role="listitem">
+                        <h3>Rapports & KPI</h3>
+                        <p>Dashboards simples pour suivre la progression des objectifs.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="section pricing" aria-labelledby="pricing-title" data-animate>
+            <div class="container">
+                <h2 id="pricing-title">Tarifs</h2>
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <h3>Starter</h3>
+                        <p class="price">Gratuit</p>
+                        <p>Pour les petites équipes</p>
+                        <a class="btn btn-outline" href="#signup">Commencer</a>
+                    </div>
+                    <div class="price-card highlight">
+                        <h3>Pro</h3>
+                        <p class="price">€9 / mois</p>
+                        <p>Fonctionnalités avancées</p>
+                        <a class="btn btn-primary" href="#signup">Essayer Pro</a>
+                    </div>
+                    <div class="price-card">
+                        <h3>Enterprise</h3>
+                        <p class="price">Sur demande</p>
+                        <p>Support & sécurité entreprise</p>
+                        <a class="btn btn-outline" href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="section testimonials" aria-labelledby="testimonials-title" data-animate>
+            <div class="container">
+                <h2 id="testimonials-title">Ils nous font confiance</h2>
+
+                <div class="testimonials-track" role="list">
+                    <blockquote class="testimonial" role="listitem">
+                        <p>« Productivine a réduit notre temps de planification de 40%. »</p>
+                        <footer>— Camille, CTO</footer>
+                    </blockquote>
+                    <blockquote class="testimonial" role="listitem">
+                        <p>« L'interface est claire et l'équipe est plus productive. »</p>
+                        <footer>— Marco, Chef de projet</footer>
+                    </blockquote>
+                    <blockquote class="testimonial" role="listitem">
+                        <p>« Facile à déployer et très stable. »</p>
+                        <footer>— Aïcha, Ops</footer>
+                    </blockquote>
+                </div>
+                <small class="muted">Glissez pour voir plus — ou utilisez le clavier (tab)</small>
+            </div>
+        </section>
+
+        <!-- Signup / Newsletter -->
+        <section id="signup" class="section signup" aria-labelledby="signup-title" data-animate>
+            <div class="container split">
+                <div>
+                    <h2 id="signup-title">Prêt à essayer ?</h2>
+                    <p>Inscrivez-vous pour un essai gratuit de 14 jours — pas de carte requise.</p>
+                </div>
+                <form class="signup-form" id="signup-form" aria-label="Formulaire d'inscription">
+                    <label for="email" class="visually-hidden">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Votre email professionnel" required>
+                    <button class="btn btn-primary">Commencer l'essai</button>
                 </form>
             </div>
         </section>
 
-        <section id="cours" class="container cards" aria-labelledby="cours-title">
-            <h2 id="cours-title" data-animate="fade-up">Cours Populaires</h2>
-            <div class="grid">
-                <article class="card" tabindex="0">
-                    <h3>Introduction à l'IA</h3>
-                    <p>Cours d'initiation aux concepts et outils de l'intelligence artificielle.</p>
-                    <a href="#" class="btn-link">Voir le cours</a>
-                </article>
-                <article class="card" tabindex="0">
-                    <h3>Algorithmique et Structures de Données</h3>
-                    <p>Principes fondamentaux et exercices pratiques.</p>
-                    <a href="#" class="btn-link">Voir le cours</a>
-                </article>
-                <article class="card" tabindex="0">
-                    <h3>Projet et Gestion</h3>
-                    <p>Méthodes agiles et gestion de projet collaboratif.</p>
-                    <a href="#" class="btn-link">Voir le cours</a>
-                </article>
-            </div>
-        </section>
+        <!-- Contact / Footer -->
+        <footer id="contact" class="site-footer" role="contentinfo" aria-labelledby="footer-title">
+            <div class="container footer-grid" data-animate>
+                <div class="footer-col">
+                    <h4 id="footer-title">Productivine</h4>
+                    <p class="muted">Simplifiez la façon dont votre équipe travaille.</p>
+                </div>
 
-        <section id="articles" class="container" aria-labelledby="articles-title">
-            <h2 id="articles-title" data-animate="fade-up">Articles Récents</h2>
-            <ul class="articles-list">
-                <li>
-                    <a href="#">Comment concevoir un cours en ligne efficace</a>
-                    <span class="meta">— 12 oct. 2025</span>
-                </li>
-                <li>
-                    <a href="#">Bonnes pratiques pour l'accessibilité web</a>
-                    <span class="meta">— 5 oct. 2025</span>
-                </li>
-            </ul>
-        </section>
-
-        <section id="forum" class="container" aria-labelledby="forum-title">
-            <h2 id="forum-title" data-animate="fade-up">Forum & Espace d'échange</h2>
-            <p>Un espace pour poser des questions et partager des idées. (Module forum à connecter au backend)</p>
-            <div class="forum-sample">
-                <article>
-                    <h3>Question : Comment préparer un exposé ?</h3>
-                    <p>Réponse de la communauté — <a href="#">Voir la discussion</a></p>
-                </article>
-            </div>
-        </section>
-
-        <section id="ressources" class="container" aria-labelledby="ressources-title">
-            <h2 id="ressources-title">Ressources Pédagogiques</h2>
-            <ul>
-                <li><a href="#">Guide PDF : Rédiger un rapport de projet</a></li>
-                <li><a href="#">Vidéo : Introduction aux réseaux neuronaux</a></li>
-                <li><a href="#">Dépôt Git : Exemples de code</a></li>
-            </ul>
-        </section>
-
-        <section id="feedback" class="container" aria-labelledby="feedback-title">
-            <h2 id="feedback-title" data-animate="fade-up">Donnez votre avis</h2>
-            <p>Évaluez nos cours et articles :</p>
-            <div class="rating" role="region" aria-label="Évaluation des contenus">
-                <button class="star" data-value="1" aria-label="1 étoile">★</button>
-                <button class="star" data-value="2" aria-label="2 étoiles">★</button>
-                <button class="star" data-value="3" aria-label="3 étoiles">★</button>
-                <button class="star" data-value="4" aria-label="4 étoiles">★</button>
-                <button class="star" data-value="5" aria-label="5 étoiles">★</button>
-                <span id="rating-result" aria-live="polite">0/5</span>
-            </div>
-        </section>
-
-        <section id="contact" class="container" aria-labelledby="contact-title">
-            <h2 id="contact-title" data-animate="fade-up">Contact</h2>
-            <p>Une question ? Envoyez-nous un message, nous répondrons rapidement.</p>
-            <form id="contact-form" aria-label="Formulaire de contact">
-                <label for="name">Nom</label>
-                <input id="name" name="name" type="text" required />
-
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required />
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit" class="btn-primary">Envoyer</button>
-                <div id="contact-status" role="status" aria-live="polite"></div>
-            </form>
-        </section>
-    </main>
-
-    <footer role="contentinfo" class="site-footer" aria-label="Pied de page">
-        <div class="container footer-inner">
-            <div class="footer-brand">
-                <a class="brand" href="#accueil">Académie</a>
-                <p class="muted">Plateforme d'apprentissage collaborative</p>
-            </div>
-            <div class="footer-links">
-                <div>
-                    <h4>Ressources</h4>
+                <div class="footer-col">
+                    <h5>Liens</h5>
                     <ul>
-                        <li><a href="#cours">Cours</a></li>
-                        <li><a href="#articles">Articles</a></li>
-                        <li><a href="#ressources">Ressources</a></li>
+                        <li><a href="#features">Fonctionnalités</a></li>
+                        <li><a href="#pricing">Tarifs</a></li>
+                        <li><a href="#testimonials">Témoignages</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4>Communauté</h4>
-                    <ul>
-                        <li><a href="#forum">Forum</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+
+                <div class="footer-col">
+                    <h5>Newsletter</h5>
+                    <form class="newsletter-form" aria-label="Inscription newsletter">
+                        <label for="news-email" class="visually-hidden">Email</label>
+                        <input id="news-email" type="email" placeholder="Votre email" required>
+                        <button class="btn btn-ghost" type="submit">S'inscrire</button>
+                    </form>
                 </div>
             </div>
-            <div class="footer-meta">
-                <div class="social">
-                    <a href="#" aria-label="Twitter">Twitter</a>
-                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                </div>
-                <p class="muted">&copy; 2025 Plateforme Académique</p>
+
+            <div class="container footer-bottom">
+                <p class="muted">© 2025 Productivine — Tous droits réservés.</p>
+                <nav aria-label="Mentions légales"><a href="#">Mentions</a> · <a href="#">Confidentialité</a></nav>
             </div>
-        </div>
-        <button id="back-to-top" aria-label="Retour en haut">↑</button>
-    </footer>
+        </footer>
 
-    <!-- Login Modal (mock) -->
-    <div id="login-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="login-title">
-        <div class="modal-content">
-            <button id="close-login" class="modal-close" aria-label="Fermer la fenêtre">×</button>
-            <h2 id="login-title">Connexion</h2>
-            <form id="login-form" aria-label="Formulaire de connexion">
-                <label for="user">Utilisateur</label>
-                <input id="user" name="user" type="text" required />
-                <label for="pass">Mot de passe</label>
-                <input id="pass" name="pass" type="password" required />
-                <button type="submit" class="btn-primary">Se connecter</button>
-                <div id="login-status" role="status" aria-live="polite"></div>
-            </form>
-        </div>
-    </div>
-
-    <script src="scripts.js" defer></script>
-</body>
-</html>
+        <script src="scripts.js" defer></script>
+    </body>
+    </html>
