@@ -100,4 +100,28 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     });
 
+    // Reveal on scroll using IntersectionObserver
+    const revealables = document.querySelectorAll('[data-animate]');
+    if('IntersectionObserver' in window && revealables.length){
+        const obs = new IntersectionObserver((entries)=>{
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('show');
+                    obs.unobserve(entry.target);
+                }
+            });
+        },{rootMargin:'0px 0px -10% 0px',threshold:0.15});
+        revealables.forEach(el => el.classList.add('reveal'));
+        revealables.forEach(el => obs.observe(el));
+    }
+
+    // Back to top button
+    const back = document.getElementById('back-to-top');
+    window.addEventListener('scroll', ()=>{
+        if(window.scrollY > 400) back.classList.add('show'); else back.classList.remove('show');
+    });
+    back && back.addEventListener('click', ()=>{
+        window.scrollTo({top:0,behavior:'smooth'});
+    });
+
 });

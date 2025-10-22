@@ -27,7 +27,7 @@
     </header>
 
     <main id="accueil" role="main">
-        <section class="hero" aria-label="Présentation">
+        <section class="hero" aria-label="Présentation" data-animate="fade-up">
             <div class="hero-overlay"></div>
             <div class="container hero-content">
                 <h1>Apprendre, Partager, Innover</h1>
@@ -41,7 +41,7 @@
         </section>
 
         <section id="cours" class="container cards" aria-labelledby="cours-title">
-            <h2 id="cours-title">Cours Populaires</h2>
+            <h2 id="cours-title" data-animate="fade-up">Cours Populaires</h2>
             <div class="grid">
                 <article class="card" tabindex="0">
                     <h3>Introduction à l'IA</h3>
@@ -62,7 +62,7 @@
         </section>
 
         <section id="articles" class="container" aria-labelledby="articles-title">
-            <h2 id="articles-title">Articles Récents</h2>
+            <h2 id="articles-title" data-animate="fade-up">Articles Récents</h2>
             <ul class="articles-list">
                 <li>
                     <a href="#">Comment concevoir un cours en ligne efficace</a>
@@ -76,7 +76,7 @@
         </section>
 
         <section id="forum" class="container" aria-labelledby="forum-title">
-            <h2 id="forum-title">Forum & Espace d'échange</h2>
+            <h2 id="forum-title" data-animate="fade-up">Forum & Espace d'échange</h2>
             <p>Un espace pour poser des questions et partager des idées. (Module forum à connecter au backend)</p>
             <div class="forum-sample">
                 <article>
@@ -96,7 +96,7 @@
         </section>
 
         <section id="feedback" class="container" aria-labelledby="feedback-title">
-            <h2 id="feedback-title">Donnez votre avis</h2>
+            <h2 id="feedback-title" data-animate="fade-up">Donnez votre avis</h2>
             <p>Évaluez nos cours et articles :</p>
             <div class="rating" role="region" aria-label="Évaluation des contenus">
                 <button class="star" data-value="1" aria-label="1 étoile">★</button>
@@ -109,7 +109,7 @@
         </section>
 
         <section id="contact" class="container" aria-labelledby="contact-title">
-            <h2 id="contact-title">Contact</h2>
+            <h2 id="contact-title" data-animate="fade-up">Contact</h2>
             <p>Une question ? Envoyez-nous un message, nous répondrons rapidement.</p>
             <form id="contact-form" aria-label="Formulaire de contact">
                 <label for="name">Nom</label>
@@ -127,13 +127,38 @@
         </section>
     </main>
 
-    <footer role="contentinfo">
-        <div class="container footer-grid">
-            <p>&copy; 2025 Plateforme Académique — Tous droits réservés.</p>
-            <nav aria-label="Liens secondaires">
-                <a href="#">Mentions légales</a> • <a href="#">Politique de confidentialité</a>
-            </nav>
+    <footer role="contentinfo" class="site-footer" aria-label="Pied de page">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a class="brand" href="#accueil">Académie</a>
+                <p class="muted">Plateforme d'apprentissage collaborative</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#cours">Cours</a></li>
+                        <li><a href="#articles">Articles</a></li>
+                        <li><a href="#ressources">Ressources</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Communauté</h4>
+                    <ul>
+                        <li><a href="#forum">Forum</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-meta">
+                <div class="social">
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                </div>
+                <p class="muted">&copy; 2025 Plateforme Académique</p>
+            </div>
         </div>
+        <button id="back-to-top" aria-label="Retour en haut">↑</button>
     </footer>
 
     <!-- Login Modal (mock) -->
