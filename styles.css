@@ -31,8 +31,41 @@ body {
     --space: 1rem;
     --ff: 'Roboto', system-ui, -apple-system, 'Segoe UI', 'Inter', Roboto, 'Helvetica Neue', Arial;
     --shadow-soft: 0 10px 30px rgba(11,22,40,0.06);
-    --shadow-sm: 0 6px 18px rgba(11,22,40,0.06);
+        --shadow-sm: 0 6px 18px rgba(11,22,40,0.06);
 }
+
+/* Theme & palette variables (light default) */
+:root[data-theme="light"]{
+    --bg: #F7F7FB;
+    --card: #FFFFFF;
+    --text: #0B1220;
+    --muted: #475569;
+    --primary: #0B63D8;
+    --accent: #00B67A;
+}
+
+:root[data-theme="dark"]{
+    --bg: #0B1220;
+    --card: #0F1724;
+    --text: #E6EEF8;
+    --muted: #94A3B8;
+    --primary: #4F8FF7;
+    --accent: #34D399;
+}
+
+/* Palette variants override primary/accent */
+:root[data-palette="warm"]{ --primary: #D97706; --accent: #F97316 }
+:root[data-palette="forest"]{ --primary: #065F46; --accent: #10B981 }
+
+/* Theme controls styling */
+.theme-controls{display:flex;align-items:center;gap:.5rem;margin-left:1rem}
+#palette-select{padding:.35rem .5rem;border-radius:6px;border:1px solid var(--gray-300);background:transparent;color:var(--text)}
+#theme-toggle{padding:.4rem .6rem;border-radius:6px;border:1px solid var(--gray-300);background:transparent}
+#theme-toggle[aria-pressed="true"]{background:var(--primary);color:#fff}
+
+/* small layout tweak for header */
+.header-inner{display:flex;align-items:center;gap:1rem;padding:.75rem 0}
+.nav{margin-left:auto;display:flex;align-items:center}
 
 /* Utility container */
 .container{max-width:var(--max-width);margin:0 auto;padding:0 1rem}

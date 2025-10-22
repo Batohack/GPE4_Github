@@ -49,4 +49,41 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-});
+    });
+
+    // Theme & palette controls (persist preferences)
+    (function(){
+        const root = document.documentElement;
+        const themeToggle = document.getElementById('theme-toggle');
+        const paletteSelect = document.getElementById('palette-select');
+
+        function applyTheme(t){
+            root.setAttribute('data-theme', t);
+            try{ localStorage.setItem('site-theme', t); }catch(e){}
+            if(themeToggle) themeToggle.setAttribute('aria-pressed', String(t === 'dark'));
+        }
+
+        function applyPalette(p){
+            root.setAttribute('data-palette', p);
+            try{ localStorage.setItem('site-palette', p); }catch(e){}
+        }
+
+        const savedTheme = (function(){ try{return localStorage.getItem('site-theme')}catch(e){return null} })();
+        const savedPalette = (function(){ try{return localStorage.getItem('site-palette')}catch(e){return 'default'} })() || 'default';
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
+        applyPalette(savedPalette);
+        if(paletteSelect) paletteSelect.value = savedPalette;
+
+        themeToggle && themeToggle.addEventListener('click', ()=>{
+            const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+            applyTheme(current === 'dark' ? 'light' : 'dark');
+        });
+
+        paletteSelect && paletteSelect.addEventListener('change', ()=>{
+            applyPalette(paletteSelect.value);
+        });
+
+    })();
+
