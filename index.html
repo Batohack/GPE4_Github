@@ -1,207 +1,69 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Productivine — Boostez votre productivité</title>
-
-    <!-- Performance: préconnexion à Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- Roboto (recommandée, conventionnelle) -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-
-    <meta name="description" content="Productivine — Application SaaS pour améliorer la productivité d'équipes. Planification, tâches et collaboration simple et élégante.">
+    <title>Group IV</title>
 </head>
 <body>
-
-    <!-- Header: sticky -->
-    <header class="site-header" role="banner">
-        <div class="container header-inner">
-            <a href="#hero" class="logo" aria-label="Productivine — page d'accueil">
-                <strong>okokokok</strong>
-            </a>
-
-            <nav class="nav" role="navigation" aria-label="Navigation principale">
-                <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Ouvrir le menu">
-                    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                </button>
-
-                <ul id="nav-list" class="nav-list" role="menubar">
-                    <li role="none"><a role="menuitem" href="#features">Fonctionnalités</a></li>
-                    <li role="none"><a role="menuitem" href="#pricing">Tarifs</a></li>
-                    <li role="none"><a role="menuitem" href="#testimonials">Témoignages</a></li>
-                    <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
-                    <li role="none" class="cta"><a class="btn btn-primary" href="#signup">Essayer gratuitement</a></li>
-                </ul>
+    <div class="container">
+        <a href="/sample.html">
+            <div class="profile-container">
         
-                        <!-- Theme controls -->
-                        <div class="theme-controls" aria-hidden="false">
-                            <label for="theme-toggle" class="visually-hidden">Changer le thème</label>
-                            <button id="theme-toggle" class="btn" aria-pressed="false" title="Basculer thème">🌙</button>
-
-                            <label for="palette-select" class="visually-hidden">Choisir une palette</label>
-                            <select id="palette-select" aria-label="Choisir une palette">
-                                <option value="default">Palette par défaut</option>
-                                <option value="warm">Palette chaude</option>
-                                <option value="forest">Palette forêt</option>
-                            </select>
-                        </div>
-            </nav>
-        </div>
-    </header>
-
-    <main id="hero" class="hero" role="main">
-        <div class="container hero-inner" data-animate>
-            <div class="hero-content">
-                <h1>Travaillez mieux. Livrez plus.</h1>
-                <p class="hero-sub">Productivine rassemble tâches, planning et collaboration dans une interface claire pour les équipes ambitieuses.</p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary" href="#signup">Essayer gratuitement</a>
-                    <a class="btn btn-ghost" href="#features">Découvrir</a>
+                <div class="profile-img">
+                    <img src="assets/tupac.jpeg" alt="Profile Image">
                 </div>
-            </div>
-
-            <figure class="hero-visual" aria-hidden="true">
-                <svg width="520" height="320" viewBox="0 0 520 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="mock-graphic">
-                    <rect x="0" y="0" width="520" height="320" rx="12" fill="#FFFFFF"/>
-                    <rect x="24" y="24" width="200" height="24" rx="6" fill="#F1F5F9"/>
-                    <rect x="24" y="64" width="460" height="20" rx="6" fill="#F8FAFC"/>
-                    <rect x="24" y="96" width="200" height="160" rx="8" fill="#F8FAFC"/>
-                    <rect x="240" y="96" width="244" height="160" rx="8" fill="#F8FAFC"/>
-                </svg>
-            </figure>
-        </div>
-    </main>
-
-    <!-- Features -->
-    <section id="features" class="section features" aria-labelledby="features-title" data-animate>
-        <div class="container">
-            <h2 id="features-title">Ce que Productivine fait pour vous</h2>
-            <p class="lede">Des outils puissants, une interface légère — tout pour garder le focus.</p>
-
-            <div class="features-grid" role="list">
-                <article class="feature-card" role="listitem">
-                    <h3>Tableaux Kanban</h3>
-                    <p>Visualisez le flux de travail et déplacez les tâches facilement.</p>
-                </article>
-                <article class="feature-card" role="listitem">
-                    <h3>Planification intelligente</h3>
-                    <p>Calendriers et timelines synchronisées pour aligner l'équipe.</p>
-                </article>
-                <article class="feature-card" role="listitem">
-                    <h3>Collaboration en temps réel</h3>
-                    <p>Commentaires, mentions et partage sécurisé des ressources.</p>
-                </article>
-                <article class="feature-card" role="listitem">
-                    <h3>Rapports & KPI</h3>
-                    <p>Dashboards simples pour suivre la progression des objectifs.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section id="pricing" class="section pricing" aria-labelledby="pricing-title" data-animate>
-        <div class="container">
-            <h2 id="pricing-title">Tarifs</h2>
-            <div class="pricing-grid">
-                <div class="price-card">
-                    <h3>Starter</h3>
-                    <p class="price">Gratuit</p>
-                    <p>Pour les petites équipes</p>
-                    <a class="btn btn-outline" href="#signup">Commencer</a>
+                <div class="profile-details">
+                    <p>Vanessa</p>
                 </div>
-                <div class="price-card highlight">
-                    <h3>Pro</h3>
-                    <p class="price">€9 / mois</p>
-                    <p>Fonctionnalités avancées</p>
-                    <a class="btn btn-primary" href="#signup">Essayer Pro</a>
+        
+        
+            </div>
+        </a>
+        <a href="/sample.html">
+            <div class="profile-container">
+        
+                <div class="profile-img">
+                    <img src="assets/tupac.jpeg" alt="Profile Image">
                 </div>
-                <div class="price-card">
-                    <h3>Enterprise</h3>
-                    <p class="price">Sur demande</p>
-                    <p>Support & sécurité entreprise</p>
-                    <a class="btn btn-outline" href="#contact">Contact</a>
+                <div class="profile-details">
+                    <p>Vanessa</p>
                 </div>
+        
+        
             </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="section testimonials" aria-labelledby="testimonials-title" data-animate>
-        <div class="container">
-            <h2 id="testimonials-title">Ils nous font confiance</h2>
-
-            <div class="testimonials-track" role="list">
-                <blockquote class="testimonial" role="listitem">
-                    <p>« Productivine a réduit notre temps de planification de 40%. »</p>
-                    <footer>— Camille, CTO</footer>
-                </blockquote>
-                <blockquote class="testimonial" role="listitem">
-                    <p>« L'interface est claire et l'équipe est plus productive. »</p>
-                    <footer>— Marco, Chef de projet</footer>
-                </blockquote>
-                <blockquote class="testimonial" role="listitem">
-                    <p>« Facile à déployer et très stable. »</p>
-                    <footer>— Aïcha, Ops</footer>
-                </blockquote>
+        </a>
+        <a href="/sample.html">
+            <div class="profile-container">
+        
+                <div class="profile-img">
+                    <img src="assets/tupac.jpeg" alt="Profile Image">
+                </div>
+                <div class="profile-details">
+                    <p>Vanessa</p>
+                </div>
+        
+        
             </div>
-            <small class="muted">Glissez pour voir plus — ou utilisez le clavier (tab)</small>
-        </div>
-    </section>
-
-    <!-- Signup / Newsletter -->
-    <section id="signup" class="section signup" aria-labelledby="signup-title" data-animate>
-        <div class="container split">
-            <div>
-                <h2 id="signup-title">Prêt à essayer ?</h2>
-                <p>Inscrivez-vous pour un essai gratuit de 14 jours — pas de carte requise.</p>
+        </a>
+        <a href="/sample.html">
+            <div class="profile-container">
+        
+                <div class="profile-img">
+                    <img src="assets/tupac.jpeg" alt="Profile Image">
+                </div>
+                <div class="profile-details">
+                    <p>Vanessa</p>
+                </div>
+        
+        
             </div>
-            <form class="signup-form" id="signup-form" aria-label="Formulaire d'inscription">
-                <label for="email" class="visually-hidden">Email</label>
-                <input id="email" name="email" type="email" placeholder="Votre email professionnel" required>
-                <button class="btn btn-primary">Commencer l'essai</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Contact / Footer -->
-    <footer id="contact" class="site-footer" role="contentinfo" aria-labelledby="footer-title">
-        <div class="container footer-grid" data-animate>
-            <div class="footer-col">
-                <h4 id="footer-title">Productivine</h4>
-                <p class="muted">Simplifiez la façon dont votre équipe travaille.</p>
-            </div>
-
-            <div class="footer-col">
-                <h5>Liens</h5>
-                <ul>
-                    <li><a href="#features">Fonctionnalités</a></li>
-                    <li><a href="#pricing">Tarifs</a></li>
-                    <li><a href="#testimonials">Témoignages</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h5>Newsletter</h5>
-                <form class="newsletter-form" aria-label="Inscription newsletter">
-                    <label for="news-email" class="visually-hidden">Email</label>
-                    <input id="news-email" type="email" placeholder="Votre email" required>
-                    <button class="btn btn-ghost" type="submit">S'inscrire</button>
-                </form>
-            </div>
-        </div>
-
-        <div class="container footer-bottom">
-            <p class="muted">© 2025 Productivine — Tous droits réservés.</p>
-            <nav aria-label="Mentions légales"><a href="#">Mentions</a> · <a href="#">Confidentialité</a></nav>
-        </div>
-    </footer>
-
-    <script src="scripts.js" defer></script>
+        </a>
+       
+    
+    
+    </div>
+    
 </body>
 </html>
