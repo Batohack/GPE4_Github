@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Yann - School Project Card</title>
+    <style>
+        /* Optional: Keep your existing custom font */
+        body {
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            background-color: #3ce1aa;
+        }
+    </style>
+</head>
+<body class="p-8 flex justify-center items-center min-h-screen">
+
+    <div class="bg-white shadow-xl rounded-lg p-6 max-w-sm w-full transform hover:scale-[1.02] transition duration-300">
+        
+        <header class="text-center mb-6">
+            <div id="my-picture-placeholder" class="mx-auto w-32 h-32 bg-gray-200 rounded-full border-4 border-indigo-500 overflow-hidden mb-4">
+                <img src="assets/yann.jpg" alt="Your Portrait Photo" class="w-full h-full object-cover">
+            </div>
+            
+            <h1 class="text-3xl font-bold text-indigo-700"></h1>
+            <p class="text-md text-gray-500">aka pilé-pommes Master</p>
+        </header>
+
+        <section class="mb-6">
+            <h2 class="text-xl font-semibold mb-2 text-indigo-600 border-b pb-1">About Me</h2>
+            <p class="text-gray-700 leading-relaxed italic">
+                A short, friendly sentence about yourself! For example: "I love learning about technology and spending my weekends exploring nature."
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-semibold mb-3 text-indigo-600 border-b pb-1">My Favorites</h2>
+
+            <div class="flex justify-between space-x-4">
+                
+                <div class="w-1/2 p-3 bg-gray-50 rounded-md border border-gray-200">
+                    <h3 class="font-medium text-lg mb-2 text-center">Favorite Meal</h3>
+                    <div id="meal-image-placeholder" class="w-full h-24 bg-red-100 rounded-lg overflow-hidden mb-2">
+                        <img src="assets/pommes-pilees.jpeg" alt="Image of Favorite Meal" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm text-center font-bold text-gray-800">[Name of Meal]</p>
+                </div>
+                
+                <div class="w-1/2 p-3 bg-gray-50 rounded-md border border-gray-200">
+                    <h3 class="font-medium text-lg mb-2 text-center">Favorite Album</h3>
+                    <div id="album-image-placeholder" class="w-full h-24 bg-blue-100 rounded-lg overflow-hidden mb-2">
+                        <img src="assets/favorite-album.jpg" alt="Image of Favorite Music Album" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm text-center font-bold text-gray-800">[Album Title] - [Artist]</p>
+                </div>
+
+            </div>
+        </section>
+
+    </div> 
+</body>
+</html>
