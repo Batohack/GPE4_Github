@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Salut je suis DORIAN</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated gradient circles */
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.4;
+            filter: blur(30px);
+            animation: float 8s ease-in-out infinite alternate;
+        }
+        .bg-circle1 {
+            width: 400px;
+            height: 400px;
+            top: 10%;
+            left: 5%;
+            background: radial-gradient(circle, #ffecd2 0%, #fcb69f 100%);
+            animation-delay: 0s;
+        }
+        .bg-circle2 {
+            width: 300px;
+            height: 300px;
+            bottom: 10%;
+            right: 10%;
+            background: radial-gradient(circle, #a1c4fd 0%, #c2e9fb 100%);
+            animation-delay: 2s;
+        }
+        .bg-circle3 {
+            width: 200px;
+            height: 200px;
+            top: 60%;
+            left: 60%;
+            background: radial-gradient(circle, #fbc2eb 0%, #a6c1ee 100%);
+            animation-delay: 4s;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(-40px) scale(1.1); }
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 40px 32px;
+            margin: 32px 0;
+            display: inline-block;
+            transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+        }
+        .content:hover {
+            transform: scale(1.04) rotate(-1deg);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+        }
+
+        p {
+            font-size: 2rem;
+            margin: 18px 0;
+            color: #222;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        p:hover {
+            color: #2575fc;
+            text-shadow: 0 2px 16px #a1c4fd99;
+        }
+    </style>
+
+    <!-- Animated background circles -->
+    <div class="bg-circle bg-circle1"></div>
+    <div class="bg-circle bg-circle2"></div>
+    <div class="bg-circle bg-circle3"></div>
+
+    <div class="content">
+        <p>BONJOUR JE M'APPELLE DORIAN</p>
+        <p>J'aime le judo </p>
+        <p>et les jeux vidéo</p>
+    </div>
+
+</body>
+</html>
