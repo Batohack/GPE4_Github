@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Salut je suis DORIAN</title>
+    <title>Dorian Aka Batohack</title>
 </head>
 <body>
     <style>
@@ -93,11 +93,66 @@
     <div class="bg-circle bg-circle2"></div>
     <div class="bg-circle bg-circle3"></div>
 
+    <!-- Avatar section -->
     <div class="content">
-        <p>BONJOUR JE M'APPELLE DORIAN</p>
-        <p>J'aime le judo </p>
-        <p>et les jeux vidéo</p>
+        <div class="avatar-container"></div>
+            
+            <img src="./assets/dorian.jpg" alt="Mon avatar" class="avatar-img">
+        </div>
     </div>
+
+    <!-- Bio section -->
+    <div class="content">
+        <p>Je m'appelle Dorian,<br>
+            J'aime le sport , aider les gens , partager de la bonne humeur ,<br>
+            J'aime la vérité, j'aime aussi danser mais en cachette,<br>
+            Mais ils ne dansent pas plus que moi<br>
+            Mon sport préféré c'est le judo pour ses valeurs et son histoire,<br>
+            J'aime en particulier Shoei Ono c'est le goat pour moi<br>
+            
+            Mon plat préféré c'est l'okok sucré je ne veux pas discuter avec quelqu'un c'est le meilleur</p>
+        
+        <!-- Artist images -->
+        <div class="artists">
+            <div class="artist-card"></div>
+            <img src="./assets/fally.jpg" alt="Fally Ipupa" class="artist-img">
+            <p class="artist-text">Mon Artiste préféré c'est FALLY IPUPA</p>
+            </div>
+            <div class="artist-card">
+            <img src="./assets/mj.jpg" alt="Michael Jackson" class="artist-img">
+            <p class="artist-text">mais en parallèle j'aime aussi Michael Jackson</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .avatar-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .avatar-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255, 255, 255, 0.5);
+        }
+        .artists {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .artist-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .artist-img:hover {
+            transform: scale(1.1);
+        }
+    </style>
 
 </body>
 </html>
