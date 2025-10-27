@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmanuel - Mes Préférences</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>EMMANUEL</h1>
+            <div class="weather-info">
+                26°C Mostly cloudy • 4:29 PM
+            </div>
+        </header>
+        
+        <div class="contact-details">
+            <div class="info-section">
+                <h3>🏫 École : GPEA</h3>
+                <h3>⚽ Sport : Football</h3>
+                <h3>🍽️ Plat préféré : Okok</h3>
+                <h3>🎵 Musique : Afro</h3>
+                <h3>🌍 Ville : Yaoundé</h3>
+            </div>
+        </div>
+        
+        <footer>
+            <p>2023-10-25</p>
+        </footer>
+    </div>
+</body>
+</html>
