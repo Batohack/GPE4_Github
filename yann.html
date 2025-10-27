@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Yann Tiger</title>
+    <style>
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            background-color: #3ce1aa;
+        }
+
+
+    </style>
+</head>
+<body class="p-8 flex justify-center items-center min-h-screen">
+
+    <div class="bg-blue-100 rounded-lg p-10 max-w-sm  transform hover:scale-[1.02] transition duration-300 w-[700px]">
+        
+        <header class="text-center mb-6">
+            <div id="my-picture-placeholder" class="mx-auto w-32 h-32 bg-gray-200 rounded-full border-4  border-indigo-500 overflow-hidden mb-4">
+                <img src="assets/yann.jpg" alt="Photo Portrait" class="w-full h-full object-cover">
+            </div>
+            
+            <h1 class="text-3xl font-bold text-indigo-700"></h1>
+            <p class="text-md text-gray-500">aka pilé-pommes Master</p>
+        </header>
+
+        <section class="mb-6">
+            <h2 class="text-xl font-semibold mb-2 text-indigo-600 border-b pb-1">Un peu de moi</h2>
+            <p class="text-gray-700 leading-relaxed italic">
+                Je m'appelle Yann. 
+                J'aime passer du temps à écouter de la musique, surtout des rythmes afrobeat (Wizkid the GOAT dayo) qui me mettent de bonne humeur.
+                 Mon plat préféré est les pilé-pommes — <span class="text-black font-bold"> pas plantain, ni patate, ni ignames </span> — <span class=" font-bold text-orange-700">pilé-pommes &#9825;</span>.
+                 Rien ne vaut un koumbou bien chaud après une journée bien remplie
+                 juste après un cours de Versioning avec Github ; ).
+                
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-semibold mb-3 text-indigo-600 border-b pb-1">Mes Favoris</h2>
+
+            <div class="flex justify-between space-x-4">
+                
+                <div class="w-1/2 p-3 bg-gray-50 rounded-md border border-gray-200">
+                    <h3 class="font-medium text-lg mb-2 text-center">Mon repas préféré</h3>
+                    <div id="meal-image-placeholder" class="w-full h-24 bg-red-100 rounded-lg overflow-hidden mb-2">
+                        <img src="assets/pommes-pilees.jpeg" alt="Image de mon repas préféré" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm text-center font-bold text-gray-800">Pilé-pommes</p>
+                </div>
+                
+                <div class="w-1/2 p-3 bg-gray-50 rounded-md border border-gray-200">
+                    <h3 class="font-medium text-lg mb-2 text-center">Album Préféré</h3>
+                    <div id="album-image-placeholder" class="w-full h-24 bg-blue-100 rounded-lg overflow-hidden mb-2">
+                        <img src="assets/gnx.jpeg" alt="Image of Favorite Music Album" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm text-center font-bold text-gray-800">gnx - Kendrick Lamar</p>
+                </div>
+
+            </div>
+        </section>
+
+    </div> 
+
+   
+</body>
+</html>
